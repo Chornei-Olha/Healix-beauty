@@ -120,7 +120,7 @@ export default function ServicesTable() {
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!isMenuOpen)}
-            className="w-full flex justify-between items-center px-4 py-2 border rounded bg-white shadow"
+            className="w-full flex justify-between items-center uppercase px-4 py-2 border rounded bg-white shadow"
           >
             <span>{selected}</span>
             <ChevronDown className={`transition ${isMenuOpen ? 'rotate-180' : ''}`} />
@@ -134,7 +134,7 @@ export default function ServicesTable() {
                     setSelected(item);
                     setMenuOpen(false);
                   }}
-                  className="p-3 hover:bg-gray-100 cursor-pointer"
+                  className="p-3 hover:bg-gray-100 cursor-pointer uppercase"
                 >
                   {item}
                 </div>
