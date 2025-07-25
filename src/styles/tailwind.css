@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Global Background Colors */
+    --global-bg-1: #0000007f;
+    --global-bg-2: #090909;
+    --global-bg-3: #09090960;
+    --global-bg-4: #0a0a0a;
+    --global-bg-5: #3a3d383f;
+    --global-bg-6: #4d3d3123;
+    --global-bg-7: #d4dccf;
+    --global-bg-8: #efefef;
+    --global-bg-9: #f0f0f056;
+    --global-bg-10: #f0f5f5;
+    --global-bg-11: #f4f0eb66;
+    --global-bg-12: #ffffff;
+    --global-bg-13: #ffffff96;
+
+    /* Global Text Colors */
+    --global-text-1: #000000;
+    --global-text-2: #090909;
+    --global-text-3: #090909a3;
+    --global-text-4: #0a0a0a;
+    --global-text-5: #161310;
+    --global-text-6: #171411cc;
+    --global-text-7: #333333;
+    --global-text-8: #3a3d38;
+    --global-text-9: #3b3b3b;
+    --global-text-10: #4d3d31;
+    --global-text-11: #4d3d317f;
+    --global-text-12: #545454;
+    --global-text-13: #f0f0f0;
+    --global-text-14: #f0f5f5;
+    --global-text-15: #f8f5f0;
+    --global-text-16: #ffffff;
+
+    /* Button Colors */
+    --button-bg-1: #4d3d31;
+
+    /* Footer Colors */
+    --footer-bg-1: #f8f5f0;
+    --footer-text-1: #828282;
+  }
+}
+
+@layer utilities {
+  /* Global Background */
+  .bg-global-1 { background-color: var(--global-bg-1); }
+  .bg-global-2 { background-color: var(--global-bg-2); }
+  .bg-global-3 { background-color: var(--global-bg-3); }
+  .bg-global-4 { background-color: var(--global-bg-4); }
+  .bg-global-5 { background-color: var(--global-bg-5); }
+  .bg-global-6 { background-color: var(--global-bg-6); }
+  .bg-global-7 { background-color: var(--global-bg-7); }
+  .bg-global-8 { background-color: var(--global-bg-8); }
+  .bg-global-9 { background-color: var(--global-bg-9); }
+  .bg-global-10 { background-color: var(--global-bg-10); }
+  .bg-global-11 { background-color: var(--global-bg-11); }
+  .bg-global-12 { background-color: var(--global-bg-12); }
+  .bg-global-13 { background-color: var(--global-bg-13); }
+
+  /* Global Text */
+  .text-global-1 { color: var(--global-text-1); }
+  .text-global-2 { color: var(--global-text-2); }
+  .text-global-3 { color: var(--global-text-3); }
+  .text-global-4 { color: var(--global-text-4); }
+  .text-global-5 { color: var(--global-text-5); }
+  .text-global-6 { color: var(--global-text-6); }
+  .text-global-7 { color: var(--global-text-7); }
+  .text-global-8 { color: var(--global-text-8); }
+  .text-global-9 { color: var(--global-text-9); }
+  .text-global-10 { color: var(--global-text-10); }
+  .text-global-11 { color: var(--global-text-11); }
+  .text-global-12 { color: var(--global-text-12); }
+  .text-global-13 { color: var(--global-text-13); }
+  .text-global-14 { color: var(--global-text-14); }
+  .text-global-15 { color: var(--global-text-15); }
+  .text-global-16 { color: var(--global-text-16); }
+
+  /* Button */
+  .bg-button-1 { background-color: var(--button-bg-1); }
+
+  /* Footer */
+  .bg-footer-1 { background-color: var(--footer-bg-1); }
+  .text-footer-1 { color: var(--footer-text-1); }
+}
