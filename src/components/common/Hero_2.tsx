@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Hero_2 = () => {
   return (
     <section
-      className="relative w-full bg-cover bg-center bg-no-repeat text-white h-[1000px]"
+      className="relative w-full bg-cover bg-center bg-no-repeat text-white h-[100vh] sm:h-[1000px]"
       style={{
         backgroundImage: `url('./images/background4.webp')`,
       }}
