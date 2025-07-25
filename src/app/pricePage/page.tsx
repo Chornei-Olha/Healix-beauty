@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Header from '@/components/common/Header';
 import Hero_2 from '../../components/common/Hero_2';
 import ServicesTable from '../../components/common/ServicesTable';
+import Blog from '../../components/common/Blog';
 
 const PricePage = () => {
   return (
@@ -27,6 +28,7 @@ const PricePage = () => {
         </div>
       </section>
       <ServicesTable />
+      <Blog />
     </div>
   );
 };
