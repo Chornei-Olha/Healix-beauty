@@ -6,6 +6,9 @@ import Header from '@/components/common/Header';
 import Hero_2 from '../../components/common/Hero_2';
 import ServicesTable from '../../components/common/ServicesTable';
 import Blog from '../../components/common/Blog';
+import BottomQuote from '../../components/common/BottomQuote';
+import Footer from '../../components/common/Footer';
+import FooterHeading from '../../components/common/FooterHeading';
 
 const PricePage = () => {
   return (
@@ -29,6 +32,9 @@ const PricePage = () => {
       </section>
       <ServicesTable />
       <Blog />
+      <BottomQuote />
+      <Footer />
+      <FooterHeading />
     </div>
   );
 };
