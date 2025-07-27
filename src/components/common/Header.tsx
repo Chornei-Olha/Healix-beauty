@@ -23,13 +23,15 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         <div className="flex justify-between items-center py-4 sm:py-6">
           {/* Logo */}
           <div className="flex-shrink-0 w-[100px] sm:w-[134px]">
-            <Image
-              src="/images/img_component_1.svg"
-              alt="AK Aesthetics Logo"
-              width={134}
-              height={32}
-              className="w-full h-auto"
-            />
+            <Link href="/">
+              <Image
+                src="/images/img_component_1.svg"
+                alt="AK Aesthetics Logo"
+                width={134}
+                height={32}
+                className="w-full h-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

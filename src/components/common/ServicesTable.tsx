@@ -172,7 +172,7 @@ export default function ServicesTable() {
             <tbody>
               {data[selected].map(([service, price]: [string, string], index: number) => (
                 <tr key={index} className="border-t hover:bg-[#edecea]">
-                  <td className="p-4 border-r border-gray-200">{service}</td>
+                  <td className="p-4 border-r border-gray-200 text-gray-60">{service}</td>
                   <td className="p-4 text-right text-gray-600">{price}</td>
                 </tr>
               ))}

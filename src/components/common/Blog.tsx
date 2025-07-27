@@ -47,7 +47,7 @@ const Blog = () => {
   });
 
   return (
-    <section className="container mx-auto py-16 px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       <div className="flex items-center justify-between">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-geist font-medium text-global-8 pb-2">
           Blog
