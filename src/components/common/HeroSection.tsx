@@ -6,17 +6,17 @@ import Button from '@/components/ui/Button';
 const HeroSection = () => {
   return (
     <section className="relative w-full bg-white overflow-hidden lg:pb-[60px]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-0">
         {/* Left (Text) */}
         <div className="order-2 sm:order-1 w-full lg:w-1/3 self-start pt-0 sm:pt-[120px] ">
-          <h1 className="text-[70px] sm:text-[86px] lg:text-[96px] justify-start font-manrope font-normal leading-tight text-[#3F3F3F] mb-6 lg:mb-10">
+          <h1 className="text-[60px] sm:text-[86px] lg:text-[96px] justify-start font-manrope font-normal leading-none sm:leading-tight text-[#3F3F3F] mt-10 lg:mb-10">
             Your Skin,
             <br className="block sm:hidden lg:block" />
             refined.
           </h1>
         </div>
         {/* Main Image */}
-        <div className="order-3 sm:order-2 w-full lg:w-1/3">
+        <div className="order-3 sm:order-2 w-full lg:w-1/3 ml-12 sm:ml-0">
           <Image
             src="/images/Anna2.webp"
             alt="Beauty treatment"
@@ -27,20 +27,20 @@ const HeroSection = () => {
           />
         </div>
         {/* Right (Text) */}
-        <div className="order-1 sm:order-3 w-full lg:w-1/3 self-start pt-[40px] sm:pt-[100px]">
+        <div className="order-1 sm:order-3 w-full lg:w-1/3 self-start pt-[20px] sm:pt-[100px]">
           <div className="flex flex-col gap-6 lg:gap-12 justify-start">
             {/* Tags */}
-            <div className="flex flex-wrap gap-3 justify-end">
-              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-10 py-3 rounded-2xl">
+            <div className="flex flex-wrap gap-3 sm:justify-end">
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-5 sm:px-10 py-3 rounded-2xl">
                 Lip augmentation
               </span>
-              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-10 py-3 rounded-2xl">
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-5 sm:px-10 py-3 rounded-2xl">
                 Lifting
               </span>
-              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-10 py-3 rounded-2xl">
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-5 sm:px-10 py-3 rounded-2xl">
                 Anti aging
               </span>
-              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-10 py-3 rounded-2xl">
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-5 sm:px-10 py-3 rounded-2xl">
                 Bio revitalization & mesotherapy
               </span>
             </div>
@@ -55,22 +55,22 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
+      </div>
 
-        {/* Mobile CTA Button */}
-        <div className="lg:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[90%]">
-          <button className="w-full bg-white text-black text-base font-medium py-4 rounded-full shadow-md z-50">
-            Book online
-          </button>
-        </div>
+      {/* Mobile CTA Button */}
+      <div className="md:hidden absolute bottom-[90px] left-1/2 transform -translate-x-1/2 w-[70%] z-[999]">
+        <button className="w-full bg-white text-black text-base font-medium py-4 rounded-full shadow-md z-[999]">
+          Book online
+        </button>
       </div>
       {/* Background Text */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-50">
-        <span className="text-[100px] sm:text-[100px] md:text-[284px] lg:text-[284px/80 font-light uppercase text-[#171411] leading-none whitespace-nowrap overflow-hidden">
-          BEAUTY BEAUTy
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-30">
+        <span className="text-[80px] md:text-[284px] lg:text-[284px/80 font-light uppercase text-[#171411] leading-none whitespace-nowrap overflow-hidden">
+          BEAUTY BEAUTY
         </span>
       </div>
-      s
-      <div className="absolute bottom-0 left-0 w-full z-30">
+
+      <div className="absolute bottom-0 left-0 w-full z-20">
         <Image
           src="/images/BG2.webp"
           alt="Background"
