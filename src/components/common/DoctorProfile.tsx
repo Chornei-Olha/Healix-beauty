@@ -5,7 +5,7 @@ import Image from 'next/image';
 const DoctorProfile = () => {
   return (
     <div className="relative bg-global-6 rounded-xl py-16 mt-8 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Background Images */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <Image
@@ -16,7 +16,7 @@ const DoctorProfile = () => {
             className="w-full h-auto"
           />
         </div>
-        <div className="hidden lg:block absolute mx-auto bottom-0 translate-x-1/3 z-[-1]">
+        <div className="hidden lg:block absolute mx-auto bottom-0 translate-x-1/2 z-[-1]">
           <Image
             src="/images/Anna.webp"
             alt="Dr. Anna Kononenko"

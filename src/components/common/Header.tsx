@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-7">
+          <nav className="hidden lg:flex items-center space-x-7 mr-auto pl-[100px]">
             {menuItems.map((item, index) => (
               <Link key={index} href={item.href} passHref>
                 <span className="text-base font-medium font-urbanist text-global-4 hover:text-global-10 transition-colors duration-200 cursor-pointer">

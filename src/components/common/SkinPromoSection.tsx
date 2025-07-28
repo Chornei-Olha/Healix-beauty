@@ -6,7 +6,7 @@ import EditText from '@/components/ui/EditText';
 
 const SkinSectionBlock = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-14 py-16">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 h-[712px] mb-10">
         {/* LEFT COLUMN – Statistics */}
         <div className="space-y-6 lg:col-span-2 flex flex-col h-full">

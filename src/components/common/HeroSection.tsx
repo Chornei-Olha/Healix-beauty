@@ -5,83 +5,81 @@ import Button from '@/components/ui/Button';
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full bg-global-12 rounded-xl overflow-hidden">
-      {/* Hero Section with Background */}
-      <div className="relative  container min-h-[1054px] overflow-x-auto">
-        {/* Background Beauty Text */}
-        <div className="absolute top-[404px] left-[-986px] z-0">
-          <span className="text-[284px] font-manrope font-light leading-[388px] uppercase text-global-6">
-            beauty
-          </span>
+    <section className="relative w-full bg-white overflow-hidden lg:pb-[60px]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
+        {/* Left (Text) */}
+        <div className="order-2 sm:order-1 w-full lg:w-1/3 self-start pt-0 sm:pt-[120px] ">
+          <h1 className="text-[70px] sm:text-[86px] lg:text-[96px] justify-start font-manrope font-normal leading-tight text-[#3F3F3F] mb-6 lg:mb-10">
+            Your Skin,
+            <br className="block sm:hidden lg:block" />
+            refined.
+          </h1>
         </div>
-
-        {/* Main Hero Content */}
-        <div className="relative z-10 flex flex-col lg:flex-row items-start justify-between w-full pt-20 pb-16">
-          {/* Left Content */}
-          <div className="w-full lg:w-1/2 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-lg">
-              <p className="text-base font-montserrat font-medium leading-6 text-global-5 mb-8 lg:mb-12">
-                Welcome — I am Dr Anna Kononenko, a medical aesthetic doctor with over a decade of
-                experience in advanced skincare and facial aesthetics.
-                <br />
-                <br />I believe that every woman is inherently beautiful. My role is not to change
-                your face, but to help you see — and feel — that beauty more clearly.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Content - Hero Image and Text */}
-          <div className="w-full lg:w-1/2 relative">
-            <div className="relative">
-              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[96px] font-manrope font-normal leading-[87px] text-global-5 mb-8">
-                Your Skin, refined.
-              </h1>
-              <div className="relative -ml-8 sm:-ml-12 lg:-ml-[148px]">
-                <Image
-                  src="/images/img_.png"
-                  alt="Beauty treatment"
-                  width={554}
-                  height={728}
-                  className="w-full max-w-[554px] h-auto"
-                />
-              </div>
-            </div>
-          </div>
+        {/* Main Image */}
+        <div className="order-3 sm:order-2 w-full lg:w-1/3">
+          <Image
+            src="/images/Anna2.webp"
+            alt="Beauty treatment"
+            width={554}
+            height={728}
+            className="w-full h-auto object-contain"
+            priority
+          />
         </div>
-
-        {/* Treatment Tags */}
-        <div className="flex flex-wrap gap-4 justify-center mt-8 px-4">
-          <span className="bg-global-8 text-global-10 text-sm font-urbanist font-medium px-4 py-2 rounded-2xl shadow-[0px_4px_8px_#888888ff]">
-            Lip augmentation
-          </span>
-          <div className="flex flex-col gap-2">
-            <div className="flex gap-4">
-              <Button
-                variant="secondary"
-                size="sm"
-                className="bg-global-8 text-global-10 text-sm font-urbanist font-medium px-8 py-2 rounded-2xl shadow-[0px_4px_8px_#888888ff]"
-              >
+        {/* Right (Text) */}
+        <div className="order-1 sm:order-3 w-full lg:w-1/3 self-start pt-[40px] sm:pt-[100px]">
+          <div className="flex flex-col gap-6 lg:gap-12 justify-start">
+            {/* Tags */}
+            <div className="flex flex-wrap gap-3 justify-end">
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-10 py-3 rounded-2xl">
+                Lip augmentation
+              </span>
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-10 py-3 rounded-2xl">
                 Lifting
-              </Button>
-              <Button
-                variant="secondary"
-                size="sm"
-                className="bg-global-8 text-global-10 text-sm font-urbanist font-medium px-6 py-2 rounded-2xl shadow-[0px_4px_8px_#888888ff]"
-              >
+              </span>
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-10 py-3 rounded-2xl">
                 Anti aging
-              </Button>
+              </span>
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-10 py-3 rounded-2xl">
+                Bio revitalization & mesotherapy
+              </span>
             </div>
-            <Button
-              variant="secondary"
-              size="sm"
-              className="bg-global-8 text-global-10 text-sm font-urbanist font-medium px-4 py-2 rounded-2xl shadow-[0px_4px_8px_#888888ff]"
-            >
-              Bio revitalization & mesotherapy
-            </Button>
+
+            {/* Description */}
+            <p className="text-base font-medium text-[#3F3F3F] font-montserrat leading-[1.6]">
+              Welcome — I’m Dr Anna Kononenko, a medical aesthetic doctor with over a decade of
+              experience in advanced skincare and facial aesthetics.
+              <br />
+              <br />I believe that every woman is inherently beautiful. My role is not to change
+              your face, but to help you see — and feel — that beauty more clearly.
+            </p>
           </div>
+        </div>
+
+        {/* Mobile CTA Button */}
+        <div className="lg:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[90%]">
+          <button className="w-full bg-white text-black text-base font-medium py-4 rounded-full shadow-md z-50">
+            Book online
+          </button>
         </div>
       </div>
-    </div>
+      {/* Background Text */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-50">
+        <span className="text-[100px] sm:text-[100px] md:text-[284px] lg:text-[284px/80 font-light uppercase text-[#171411] leading-none whitespace-nowrap overflow-hidden">
+          BEAUTY BEAUTy
+        </span>
+      </div>
+      s
+      <div className="absolute bottom-0 left-0 w-full z-30">
+        <Image
+          src="/images/BG2.webp"
+          alt="Background"
+          width={1422}
+          height={158}
+          className="w-full h-[431px]"
+        />
+      </div>
+    </section>
   );
 };
 

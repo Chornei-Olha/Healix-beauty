@@ -5,7 +5,7 @@ import Button from '@/components/ui/Button';
 
 const ZemitsSection = () => {
   return (
-    <div className="bg-global-12 rounded-xl p-8 sm:p-12 lg:p-16 space-y-16">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8  bg-global-12 rounded-xl space-y-16 pt-12">
       {/* Text Block */}
       <div className="space-y-4">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-geist font-semibold text-global-4 leading-tight">

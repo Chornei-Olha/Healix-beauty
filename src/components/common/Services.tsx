@@ -90,7 +90,7 @@ const Services = () => {
   const visibleServices = isMobile && !showAll ? services.slice(0, 4) : services;
 
   return (
-    <section className="pt-[83px] px-4 md:px-8">
+    <section className="pt-[83px] container mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-center uppercase font-light mb-5 text-[24px] md:text-[40px] leading-[29.28px] md:leading-[48.8px] font-manrope text-[#090909]">
         Services <span className="italic font-inter">Healix beauty</span>
       </h2>
