@@ -44,7 +44,7 @@ const PopularServices = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="flex-shrink-0 w-[190.66px] md:w-[360px] bg-white/40 px-3 md:px-4 pt-3 md:pt-4 pb-0 md:pb-6 text-center"
+              className="flex-shrink-0 w-full md:w-[360px] bg-white/40 px-3 md:px-4 pt-3 md:pt-4 pb-0 md:pb-6 text-center"
             >
               <h3 className="font-manrope text-[14px] md:text-[18px] font-extralight leading-[14px] md:leading-[18px] uppercase">
                 {service.title}

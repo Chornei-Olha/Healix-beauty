@@ -13,7 +13,7 @@ const DoctorProfile = () => {
             alt="Background"
             width={1422}
             height={158}
-            className="w-full h-auto z-10"
+            className="w-full h-auto"
           />
         </div>
         <div className="hidden lg:block absolute mx-auto bottom-0 translate-x-1/3 z-[-1]">
@@ -27,7 +27,7 @@ const DoctorProfile = () => {
         </div>
 
         {/* Content wrapper */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-12">
           {/* Left column */}
           <div className="flex flex-col justify-between space-y-16">
             {/* Top: Heading and intro */}
@@ -140,13 +140,27 @@ const DoctorProfile = () => {
 
           {/* Mobile content block */}
           <div className="lg:hidden">
-            <Image
-              src="/images/Anna.webp"
-              alt="Dr. Anna Kononenko"
-              width={742}
-              height={724}
-              className="w-full h-auto mx-auto mb-8"
-            />
+            <div className="lg:hidden relative mb-8">
+              {/* Anna image */}
+              <Image
+                src="/images/Anna.webp"
+                alt="Dr. Anna Kononenko"
+                width={742}
+                height={724}
+                className="w-full h-auto mx-auto relative z-0"
+              />
+
+              {/* BG under Anna */}
+              <div className="absolute bottom-0 left-0 w-full z-10">
+                <Image
+                  src="/images/BG.webp"
+                  alt="Background"
+                  width={1422}
+                  height={158}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
 
             <div className="space-y-8">
               {/* Cards reused */}

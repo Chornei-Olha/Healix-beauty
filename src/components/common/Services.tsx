@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
+
 import service1 from '/public/images/service1.webp';
 import service2 from '/public/images/service2.webp';
 import service3 from '/public/images/service3.webp';
@@ -14,6 +16,8 @@ import service9 from '/public/images/service9.webp';
 
 const Services = () => {
   const router = useRouter();
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const services = [
     {
@@ -73,44 +77,66 @@ const Services = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const visibleServices = isMobile && !showAll ? services.slice(0, 4) : services;
+
   return (
     <section className="pt-[83px] px-4 md:px-8">
-      <h2 className="text-center uppercase font-light text-[24px] md:text-[40px] leading-[29.28px] md:leading-[48.8px] font-manrope text-[#090909]">
+      <h2 className="text-center uppercase font-light mb-5 text-[24px] md:text-[40px] leading-[29.28px] md:leading-[48.8px] font-manrope text-[#090909]">
         Services <span className="italic font-inter">Healix beauty</span>
       </h2>
-      <p className="hidden md:block text-center text-[#090909] font-manrope text-sm font-light leading-[23.94px] mt-2">
+      <p className="text-center text-[#090909] font-manrope text-sm font-light leading-[23.94px] mb-10">
         We create beauty together with you and with care. For all services, we carefully select
         products that are safe for you and the environment.
       </p>
 
       {/* Grid */}
-      <div className="mt-8 md:mt-9 grid gap-3 md:gap-[23px] grid-cols-1 md:grid-cols-3 auto-rows-[240px]">
-        {services.map((service, idx) => {
-          const baseClass =
-            'relative overflow-hidden shadow-md md:rounded-[20px] w-full h-[180px] md:h-full group';
+      <div className="mt-0 sm:mt-9 grid gap-0 md:gap-[23px] grid-cols-1 md:grid-cols-3 auto-rows-[200px]">
+        {visibleServices.map((service, idx) => {
+          const baseClass = 'relative overflow-hidden shadow-md rounded-[20px] w-full group';
 
-          // Grid layout positions (custom per card)
-          const layout = {
-            0: 'md:col-span-1 md:row-span-2',
-            1: 'md:col-start-2 md:row-start-1',
-            2: 'md:col-start-3 md:row-start-1',
-            3: 'md:col-start-2 md:row-start-2',
-            4: 'md:col-start-3 md:row-start-2',
-            5: 'md:col-span-1 md:row-span-2',
-            6: 'md:col-start-2 md:row-start-3',
-            7: 'md:col-start-3 md:row-start-3',
-            8: 'md:col-start-2 md:col-span-2 md:row-start-4 h-[180px] md:h-[240px]',
-          };
+          const layout = [
+            'md:col-span-1 md:row-span-2',
+            'md:col-start-2 md:row-start-1',
+            'md:col-start-3 md:row-start-1',
+            'md:col-start-2 md:row-start-2',
+            'md:col-start-3 md:row-start-2',
+            'md:col-span-1 md:row-span-2',
+            'md:col-start-2 md:row-start-3',
+            'md:col-start-3 md:row-start-3',
+            'md:col-start-2 md:col-span-2 md:row-start-4 h-[180px] md:h-[240px]',
+          ];
 
-          return (
-            <div key={service.id} className={`${baseClass} ${layout[idx] ?? ''}`}>
+          const isFirstMobileCard = isMobile && !showAll && idx === 0;
+          const isSecondMobileCard = isMobile && !showAll && idx === 1;
+
+          const card = (
+            <div
+              key={service.id}
+              className={`${baseClass} ${layout[idx] ?? ''} ${
+                isFirstMobileCard
+                  ? 'h-[340px] md:h-full mb-[150px]'
+                  : isSecondMobileCard
+                    ? 'mt-[150px] h-[180px] md:h-full'
+                    : 'h-[180px] md:h-full'
+              }`}
+            >
               <Image
                 src={service.image}
                 alt={service.title}
                 fill
                 className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/50 to-black/80 text-white flex flex-col py-4 md:py-7 pl-4 md:pl-7 transition-colors group-hover:from-black/60 group-hover:to-black/90">
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#090909] to-[#090909]/64 text-white flex flex-col py-4 md:py-7 pl-4 md:pl-7 transition-colors group-hover:from-black/60 group-hover:to-black/90">
                 <div>
                   <h3 className="uppercase font-manrope text-[20px] md:text-[28px] font-light leading-[28px]">
                     {service.title}
@@ -129,18 +155,37 @@ const Services = () => {
               </div>
             </div>
           );
+
+          return isFirstMobileCard ? (
+            <div key={service.id} className="pb-[64px]">
+              {card}
+            </div>
+          ) : (
+            card
+          );
         })}
       </div>
 
       {/* Button */}
-      <div className="text-center mt-[21.73px] md:mt-[55.8px]">
-        <button
-          onClick={() => router.push('/price')}
-          className="w-full md:max-w-[200px] px-[61.5px] py-[13px] bg-[#090909] text-white uppercase font-manrope text-[14px] md:text-[12px] font-light leading-[16.8px] md:leading-[14.4px] hover:bg-[#837ba68a] transition-colors"
-        >
-          More
-        </button>
-      </div>
+      {isMobile && (
+        <div className="text-center mt-[21.73px] md:mt-[55.8px]">
+          {!showAll ? (
+            <button
+              onClick={() => setShowAll(true)}
+              className="w-full md:max-w-[200px] px-[61.5px] py-[13px] bg-[#090909] text-white uppercase font-manrope text-[14px] md:text-[12px] font-light leading-[16.8px] md:leading-[14.4px] hover:bg-[#837ba68a] transition-colors"
+            >
+              More
+            </button>
+          ) : (
+            <button
+              onClick={() => router.push('/pricePage')}
+              className="w-full md:max-w-[200px] px-[61.5px] py-[13px] bg-[#090909] text-white uppercase font-manrope text-[14px] md:text-[12px] font-light leading-[16.8px] md:leading-[14.4px] hover:bg-[#837ba68a] transition-colors"
+            >
+              PRICE
+            </button>
+          )}
+        </div>
+      )}
     </section>
   );
 };
