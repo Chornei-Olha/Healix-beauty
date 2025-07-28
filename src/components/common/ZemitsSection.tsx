@@ -53,7 +53,7 @@ const ZemitsSection = () => {
         {/* Feature Images */}
         <div className="space-y-1 order-1 lg:order-2">
           <Image
-            src="/images/img_feature_image.png"
+            src="/images/benefits1.webp"
             alt="Treatment feature"
             width={408}
             height={414}
@@ -62,7 +62,7 @@ const ZemitsSection = () => {
         </div>
         <div className="space-y-1 order-3 lg:order-3">
           <Image
-            src="/images/img_benefits_card3.png"
+            src="/images/benefits2.webp"
             alt="Benefits"
             width={410}
             height={414}

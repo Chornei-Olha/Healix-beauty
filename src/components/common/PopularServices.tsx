@@ -3,10 +3,10 @@
 import Image from 'next/image';
 import { useRef } from 'react';
 
-import service1 from '/public/images/img_photo_529440321.png';
-import service2 from '/public/images/img_photo_2023_09_2.png';
-import service3 from '/public/images/img_img_5098_e16964.png';
-import service4 from '/public/images/img_img_7754_jpg_webp.png';
+import service1 from '/public/images/popular1.webp';
+import service2 from '/public/images/popular2.webp';
+import service3 from '/public/images/popular3.webp';
+import service4 from '/public/images/popular4.webp';
 
 const PopularServices = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
