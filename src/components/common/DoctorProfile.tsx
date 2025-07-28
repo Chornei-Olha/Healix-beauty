@@ -141,7 +141,7 @@ const DoctorProfile = () => {
           {/* Mobile content block */}
           <div className="lg:hidden">
             <Image
-              src="/images/img__724x742.png"
+              src="/images/Anna.webp"
               alt="Dr. Anna Kononenko"
               width={742}
               height={724}
