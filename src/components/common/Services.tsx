@@ -124,9 +124,9 @@ const Services = () => {
               key={service.id}
               className={`${baseClass} ${layout[idx] ?? ''} ${
                 isFirstMobileCard
-                  ? 'h-[340px] md:h-full mb-[150px]'
+                  ? 'h-[180px] md:h-full mb-[200px]'
                   : isSecondMobileCard
-                    ? 'mt-[150px] h-[180px] md:h-full'
+                    ? 'mt-[0px] h-[180px] md:h-full'
                     : 'h-[180px] md:h-full'
               }`}
             >

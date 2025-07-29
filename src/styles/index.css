@@ -1,13 +1,26 @@
 @import './tailwind.css';
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600&family=Geist:wght@400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600&family=Geist:wght@400;500;600&display=swap'); */
+
+/* styles/globals.css или app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/* Geist нет в Google Fonts, см. ниже */
 
 body {
-  font-family: 'Geist', 'Urbanist', 'Manrope', sans-serif;
+  font-family:
+    'Geist',
+    'Urbanist',
+    'Manrope',
+    'Montserrat' sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }

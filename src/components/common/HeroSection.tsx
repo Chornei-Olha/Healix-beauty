@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-0">
         {/* Left (Text) */}
         <div className="order-2 sm:order-1 w-full lg:w-1/3 self-start pt-0 sm:pt-[120px] ">
-          <h1 className="text-[60px] sm:text-[86px] lg:text-[96px] justify-start font-manrope font-normal leading-none sm:leading-tight text-[#3F3F3F] mt-10 lg:mb-10">
+          <h1 className="text-[60px] sm:text-[86px] lg:text-[96px] justify-start font-manrope font-regular leading-none sm:leading-tight text-[#3F3F3F] mt-10 lg:mb-10">
             Your Skin,
             <br className="block sm:hidden lg:block" />
             refined.
@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="order-1 sm:order-3 w-full lg:w-1/3 self-start pt-[20px] sm:pt-[100px]">
           <div className="flex flex-col gap-6 lg:gap-12 justify-start">
             {/* Tags */}
-            <div className="flex flex-wrap gap-3 sm:justify-end">
+            <div className="flex flex-wrap gap-3 sm:justify-end font-urbanist">
               <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[10px] sm:text-sm font-medium px-5 sm:px-10 py-3 rounded-2xl">
                 Lip augmentation
               </span>
@@ -64,13 +64,13 @@ const HeroSection = () => {
         </button>
       </div>
       {/* Background Text */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-30">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20">
         <span className="text-[80px] md:text-[284px] lg:text-[284px/80 font-light uppercase text-[#171411] leading-none whitespace-nowrap overflow-hidden">
           BEAUTY BEAUTY
         </span>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full z-20">
+      <div className="absolute bottom-0 left-0 w-full z-30">
         <Image
           src="/images/BG2.webp"
           alt="Background"
