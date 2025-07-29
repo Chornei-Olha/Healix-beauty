@@ -23,7 +23,7 @@ const ZemitsSection = () => {
       {/* Cards & Images */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Benefits Card */}
-        <div className="bg-global-10 rounded-[40px] p-12 space-y-8 order-2 lg:order-1">
+        <div className="bg-global-10 rounded-[40px] p-5 sm:p-10 space-y-8 order-2 lg:order-1">
           <h3 className="text-2xl font-urbanist font-semibold text-global-4">Benefits:</h3>
           <p className="text-base font-urbanist text-global-9 leading-7">
             No surgery
@@ -33,7 +33,7 @@ const ZemitsSection = () => {
           </p>
           <div className="border-t border-[#0a0a0a19] pt-4">
             <div className="flex items-center justify-between">
-              <div className="bg-global-4 rounded-[30px] w-[164px] h-[62px] flex justify-center items-center">
+              <div className="bg-global-4 rounded-[30px] w-[120px] sm:w-[164px] h-[50px] sm:h-[62px] flex justify-center items-center">
                 {' '}
                 <Image
                   src="/images/img_vector.svg"
@@ -44,7 +44,9 @@ const ZemitsSection = () => {
                 />
               </div>
               <div className="flex items-center space-x-4">
-                <span className="text-5xl font-urbanist font-semibold text-global-4">250+</span>
+                <span className="text-4xl sm:text-5xl font-urbanist font-semibold text-global-4">
+                  250+
+                </span>
               </div>
             </div>
           </div>

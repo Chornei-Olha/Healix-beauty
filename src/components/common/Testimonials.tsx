@@ -43,22 +43,22 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="w-full container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full container mx-auto px-4 sm:px-6 lg:px-8 mt-[70px]">
       {/* Heading */}
       <div className="text-center">
-        <h2 className="text-[80px] sm:text-[100px] md:text-[250px] font-geist font-medium text-global-8 leading-snug">
+        <h2 className="text-[70px] sm:text-[100px] md:text-[250px] font-geist font-medium text-global-8 leading-tight">
           What they
         </h2>
-        <h2 className="text-[80px] sm:text-[100px] md:text-[250px] font-geist font-medium text-global-8 leading-snug -mt-2">
+        <h2 className="text-[70px] sm:text-[100px] md:text-[250px] font-geist font-medium text-global-8 leading-tight">
           are saying
         </h2>
       </div>
 
       {/* Testimonials Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-7">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-global-12 rounded-lg p-6 space-y-6">
-            <p className="text-lg font-geist font-medium text-global-7 leading-7">
+            <p className="text-sm sm:text-lg font-geist font-medium text-global-7 leading-7">
               {testimonial.text}
             </p>
 
