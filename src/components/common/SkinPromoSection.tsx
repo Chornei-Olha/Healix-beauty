@@ -130,7 +130,7 @@ const SkinSectionBlock = () => {
               />
             </div>
             <div>
-              <h3 className="text-5xl font-geist font-medium text-global-16 leading-[63px] mb-8">
+              <h3 className="text-3xl sm:text-5xl font-geist font-medium text-global-16 leading-[40px] sm:leading-[63px] mt-5 sm:mt-0 mb-8">
                 Your skin deserves better.
               </h3>
               <div className="space-y-3">
@@ -138,28 +138,28 @@ const SkinSectionBlock = () => {
                   <Button
                     variant="secondary"
                     size="xs"
-                    className="bg-global-7 text-global-8 text-sm font-geist font-medium px-4 py-2 rounded-lg"
+                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
                   >
                     Smoother texture
                   </Button>
                   <Button
                     variant="secondary"
                     size="xs"
-                    className="bg-global-7 text-global-8 text-sm font-geist font-medium px-4 py-2 rounded-lg"
+                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
                   >
                     Enhanced firmness
                   </Button>
                   <Button
                     variant="secondary"
                     size="xs"
-                    className="bg-global-7 text-global-8 text-sm font-geist font-medium px-4 py-2 rounded-lg"
+                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
                   >
                     Long-lasting hydration
                   </Button>
                   <Button
                     variant="secondary"
                     size="xs"
-                    className="bg-global-7 text-global-8 text-sm font-geist font-medium px-4 py-2 rounded-lg"
+                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
                   >
                     Smaller pores
                   </Button>
@@ -168,28 +168,28 @@ const SkinSectionBlock = () => {
                   <Button
                     variant="secondary"
                     size="xs"
-                    className="bg-global-7 text-global-8 text-sm font-geist font-medium px-6 py-2 rounded-lg"
+                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-6 py-1 sm:py-2 rounded-lg"
                   >
                     Improved clarity
                   </Button>
                   <Button
                     variant="secondary"
                     size="xs"
-                    className="bg-global-7 text-global-8 text-sm font-geist font-medium px-4 py-2 rounded-lg"
+                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
                   >
                     Clearer skin
                   </Button>
                   <Button
                     variant="secondary"
                     size="xs"
-                    className="bg-global-7 text-global-8 text-sm font-geist font-medium px-4 py-2 rounded-lg"
+                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
                   >
                     Stronger barrier
                   </Button>
                   <Button
                     variant="secondary"
                     size="xs"
-                    className="bg-global-7 text-global-8 text-sm font-geist font-medium px-4 py-2 rounded-lg"
+                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
                   >
                     Natural radiance
                   </Button>
