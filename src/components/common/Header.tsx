@@ -1,7 +1,8 @@
 'use client';
+
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface HeaderProps {
   className?: string;
@@ -9,13 +10,40 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const menuItems = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
+    { label: 'About', href: '#about' },
     { label: 'Pricing', href: '/pricePage' },
-    { label: 'Reviews', href: '/reviews' },
+    { label: 'Reviews', href: '#reviews' },
   ];
+
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('#')) {
+      const id = href.slice(1);
+      if (pathname === '/') {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        router.push(`/${href}`);
+      }
+    } else {
+      router.push(href);
+    }
+    setMenuOpen(false); // Закрыть мобильное меню
+  };
+
+  const scrollToCallbackForm = () => {
+    const section = document.getElementById('footer');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMenuOpen(false);
+  };
 
   return (
     <header className={`bg-global-12 ${className}`}>
@@ -23,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         <div className="flex justify-between items-center py-4 sm:py-6">
           {/* Logo */}
           <div className="flex-shrink-0 w-[100px] sm:w-[134px]">
-            <Link href="/">
+            <a href="/">
               <Image
                 src="/images/img_component_1.svg"
                 alt="AK Aesthetics Logo"
@@ -31,32 +59,34 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
                 height={32}
                 className="w-full h-auto"
               />
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-7 mr-auto pl-[100px]">
             {menuItems.map((item, index) => (
-              <Link key={index} href={item.href} passHref>
-                <span className="text-base font-medium font-urbanist text-global-4 hover:text-global-10 transition-colors duration-200 cursor-pointer">
-                  {item.label}
-                </span>
-              </Link>
+              <button
+                key={index}
+                onClick={() => handleNavClick(item.href)}
+                className="text-base font-medium font-urbanist text-global-4 hover:text-global-10 transition-colors duration-200"
+              >
+                {item.label}
+              </button>
             ))}
           </nav>
 
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center space-x-5">
-            {/* Request Callback Button */}
             <div className="relative">
-              <button className="bg-global-12 border border-[#4541404c] rounded-[26px] px-4 py-2.5 hover:bg-global-10 transition-all duration-200">
+              <button
+                onClick={scrollToCallbackForm}
+                className="bg-global-12 border border-[#4541404c] rounded-[26px] px-4 py-2.5 hover:bg-global-10 transition-all duration-200"
+              >
                 <span className="text-base font-medium font-urbanist text-global-1">
                   Request a callback
                 </span>
               </button>
             </div>
-
-            {/* Book Online Button */}
             <button className="bg-global-12 border border-[#4541404c] rounded-[26px] px-6 py-3 hover:bg-global-10 transition-all duration-200">
               <span className="text-base font-medium font-urbanist text-global-2">Book online</span>
             </button>
@@ -88,14 +118,19 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         <nav className={`${menuOpen ? 'block' : 'hidden'} lg:hidden pb-4 border-t border-global-7`}>
           <div className="pt-4 space-y-5">
             {menuItems.map((item, index) => (
-              <Link key={index} href={item.href} passHref>
-                <span className="flex flex-col pb-3 items-center justify-center text-base font-medium font-urbanist text-global-4 hover:text-global-10 transition-colors duration-200 cursor-pointer">
-                  {item.label}
-                </span>
-              </Link>
+              <button
+                key={index}
+                onClick={() => handleNavClick(item.href)}
+                className="w-full text-center text-base font-medium font-urbanist text-global-4 hover:text-global-10 transition-colors duration-200"
+              >
+                {item.label}
+              </button>
             ))}
             <div className="pt-4 space-y-3">
-              <button className="w-full bg-global-12 border border-[#4541404c] rounded-[26px] px-4 py-3 text-base font-medium font-urbanist text-global-1 hover:bg-global-10 transition-all duration-200">
+              <button
+                onClick={scrollToCallbackForm}
+                className="w-full bg-global-12 border border-[#4541404c] rounded-[26px] px-4 py-3 text-base font-medium font-urbanist text-global-1 hover:bg-global-10 transition-all duration-200"
+              >
                 Request a callback
               </button>
               <button className="w-full bg-global-12 border border-[#4541404c] rounded-[26px] px-4 py-3 text-base font-medium font-urbanist text-global-2 hover:bg-global-10 transition-all duration-200">

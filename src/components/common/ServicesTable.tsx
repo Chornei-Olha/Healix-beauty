@@ -149,8 +149,8 @@ export default function ServicesTable() {
             <button
               key={item}
               onClick={() => setSelected(item)}
-              className={`text-left px-4 py-3 rounded uppercase hover:text-white border-b border-gray-200 hover:bg-[#4D3D31] ${
-                selected === item ? 'bg-[#4D3D31] font-semibold' : ''
+              className={`text-left px-4 py-3 rounded uppercase font-geist font-extralight hover:text-white border-b border-gray-200 hover:bg-[#4D3D31] ${
+                selected === item ? 'bg-[#4D3D31] text-white font-regular' : ''
               }`}
             >
               {item}
@@ -165,15 +165,19 @@ export default function ServicesTable() {
           <table className="w-full table-auto border-collapse">
             <thead className="bg-[#dcd8d6] text-left">
               <tr>
-                <th className="p-4 border-r border-gray-200 font-semibold">SERVICE</th>
-                <th className="p-4 font-semibold text-right">PRICE</th>
+                <th className="p-4 border-r border-gray-200 font-geist font-extralight">SERVICE</th>
+                <th className="p-4 text-right font-geist font-extralight">PRICE</th>
               </tr>
             </thead>
             <tbody>
               {data[selected].map(([service, price]: [string, string], index: number) => (
                 <tr key={index} className="border-t hover:bg-[#edecea]">
-                  <td className="p-4 border-r border-gray-200 text-gray-60">{service}</td>
-                  <td className="p-4 text-right text-gray-600">{price}</td>
+                  <td className="p-4 border-r border-gray-200 text-gray-60 font-geist font-extralight">
+                    {service}
+                  </td>
+                  <td className="p-4 text-right text-gray-600 font-geist font-extralight">
+                    {price}
+                  </td>
                 </tr>
               ))}
             </tbody>

@@ -43,7 +43,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="w-full container mx-auto px-4 sm:px-6 lg:px-8 mt-[70px]">
+    <div id="reviews" className="w-full container mx-auto px-4 sm:px-6 lg:px-8 mt-[70px]">
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-[70px] sm:text-[100px] md:text-[250px] font-geist font-medium text-global-8 leading-tight">

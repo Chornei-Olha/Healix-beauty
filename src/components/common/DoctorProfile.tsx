@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const DoctorProfile = () => {
   return (
-    <div className="relative bg-global-6 rounded-xl py-16 mt-8 overflow-hidden">
+    <div id="about" className="relative bg-global-6 rounded-xl py-16 mt-8 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Background Images */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
@@ -109,8 +109,8 @@ const DoctorProfile = () => {
             {/* Bottom-right: Client Stats Card */}
             <div className="hidden lg:block max-w-md self-end mt-12">
               <div className="bg-global-13 rounded-xl p-6 shadow-[0px_4px_4px_#888888ff] space-y-5">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
+                <div className="flex items-center justify-between space-x-4">
+                  <div className="flex items-center">
                     <span className="text-6xl font-urbanist font-semibold text-global-11">360</span>
                     <span className="text-5xl font-urbanist font-semibold text-global-11">+</span>
                   </div>

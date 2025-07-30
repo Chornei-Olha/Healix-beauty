@@ -37,7 +37,7 @@ const SkinSectionBlock = () => {
               </p>
               <Button
                 variant="secondary"
-                size="sm"
+                size="md"
                 className="bg-global-12 text-global-2 text-xs font-manrope font-light uppercase px-8 py-2"
               >
                 BOOK NOW

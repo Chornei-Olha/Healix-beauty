@@ -12,27 +12,26 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle email subscription
     console.log('Email submitted:', email);
     setEmail('');
   };
 
   const menuLinks = [
     { label: 'About', href: '/about' },
-    { label: 'Pricing', href: '/pricing' },
+    { label: 'Pricing', href: '/pricePage' },
     { label: 'Reviews', href: '/reviews' },
   ];
 
   const socialLinks = [
-    { label: 'Instagram', href: '#' },
-    { label: 'X / Twitter', href: '#' },
-    { label: 'Tiktok', href: '#' },
+    { label: 'Instagram', href: 'https://www.instagram.com/' },
+    { label: 'X / Twitter', href: 'https://twitter.com/' },
+    { label: 'Tiktok', href: 'https://www.tiktok.com/' },
   ];
 
   const legalLinks = [
-    { label: 'Terms & Conditions', href: '/terms' },
-    { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Payment Methods', href: '/payment' },
+    { label: 'Terms & Conditions', href: 'https://drive.google.com/' },
+    { label: 'Privacy Policy', href: 'https://drive.google.com/' },
+    { label: 'Payment Methods', href: 'https://drive.google.com/' },
   ];
 
   return (
@@ -83,6 +82,8 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 <li key={index}>
                   <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-2xl sm:text-3xl font-medium font-geist text-global-8 hover:text-global-10 transition-colors duration-200"
                   >
                     {link.label}
@@ -93,7 +94,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="lg:col-span-2 space-y-6 sm:space-y-8">
+          <div id="footer" className="lg:col-span-2 space-y-6 sm:space-y-8">
             <div className="space-y-2">
               <h3 className="text-2xl sm:text-3xl font-medium font-geist text-global-8">
                 Stay essential.
@@ -170,6 +171,8 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 <a
                   key={index}
                   href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm font-medium font-geist text-global-12 hover:text-global-8 transition-colors duration-200"
                 >
                   {link.label}
@@ -179,8 +182,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             <p className="text-sm font-medium font-geist text-global-12">© 2025 Healix beauty™</p>
           </div>
         </div>
+
+        {/* Created by */}
         <div className="mt-[30px]">
-          {' '}
           <p className="text-sm text-gray-500">
             Created by{' '}
             <Link
