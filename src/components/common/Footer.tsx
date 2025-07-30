@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface FooterProps {
   className?: string;
@@ -19,19 +20,19 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   const menuLinks = [
     { label: 'About', href: '/about' },
     { label: 'Pricing', href: '/pricing' },
-    { label: 'Reviews', href: '/reviews' }
+    { label: 'Reviews', href: '/reviews' },
   ];
 
   const socialLinks = [
     { label: 'Instagram', href: '#' },
     { label: 'X / Twitter', href: '#' },
-    { label: 'Tiktok', href: '#' }
+    { label: 'Tiktok', href: '#' },
   ];
 
   const legalLinks = [
     { label: 'Terms & Conditions', href: '/terms' },
     { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Payment Methods', href: '/payment' }
+    { label: 'Payment Methods', href: '/payment' },
   ];
 
   return (
@@ -65,8 +66,10 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             </ul>
             <div className="pt-4 sm:pt-6">
               <p className="text-sm font-manrope font-light text-global-1 leading-relaxed">
-                1 Sea View Rd, Parkstone, Poole<br />
-                BH12 3LP<br />
+                1 Sea View Rd, Parkstone, Poole
+                <br />
+                BH12 3LP
+                <br />
                 Office 9
               </p>
             </div>
@@ -96,15 +99,20 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 Stay essential.
               </h3>
               <p className="text-sm font-medium font-geist text-global-12 leading-relaxed">
-                Join our community for science-based skincare advice,<br />
-                and exclusive access to limited-time offers. We respect your<br />
+                Join our community for science-based skincare advice,
+                <br />
+                and exclusive access to limited-time offers. We respect your
+                <br />
                 inbox as much as your skin - no excessive communication.
               </p>
             </div>
 
             {/* Email Subscription Form */}
             <div className="space-y-4">
-              <form onSubmit={handleEmailSubmit} className="flex items-center bg-global-12 rounded-lg p-1.5">
+              <form
+                onSubmit={handleEmailSubmit}
+                className="flex items-center bg-global-12 rounded-lg p-1.5"
+              >
                 <input
                   type="email"
                   placeholder="Email"
@@ -156,7 +164,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 
         {/* Bottom Links */}
         <div className="border-t border-[#dedede] pt-5 sm:pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
+          <div className="flex flex-col sm:flex-row justify-between items-center sm:items-center space-y-4 sm:space-y-0">
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
               {legalLinks.map((link, index) => (
                 <a
@@ -168,10 +176,22 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 </a>
               ))}
             </div>
-            <p className="text-sm font-medium font-geist text-global-12">
-              © 2025 Healix beauty™
-            </p>
+            <p className="text-sm font-medium font-geist text-global-12">© 2025 Healix beauty™</p>
           </div>
+        </div>
+        <div className="mt-[30px]">
+          {' '}
+          <p className="text-sm text-gray-500">
+            Created by{' '}
+            <Link
+              href="https://impuls-studio.com.ua/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              Impuls Studio
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
