@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="order-1 lg:order-3 w-full lg:w-1/3 self-start pt-[20px] sm:pt-[20px] lg:pt-[100px]">
           <div className="flex flex-col gap-6 lg:gap-12 justify-start">
             {/* Tags */}
-            <div className="flex flex-wrap gap-3 sm:justify-end font-urbanist">
+            {/* <div className="flex flex-wrap gap-3 sm:justify-end font-urbanist">
               <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[13px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
                 Lip augmentation
               </span>
@@ -43,13 +43,12 @@ const HeroSection = () => {
               <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[13px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
                 Bio revitalization & mesotherapy
               </span>
-            </div>
+            </div> */}
 
             {/* Description */}
             <p className="text-base font-medium text-[#3F3F3F] font-montserrat leading-[1.25]">
               Welcome — I’m Dr Anna Kononenko, a medical aesthetic doctor with over a decade of
               experience in advanced skincare and facial aesthetics.
-              <br />
               <br />I believe that every woman is inherently beautiful. My role is not to change
               your face, but to help you see — and feel — that beauty more clearly.
             </p>
