@@ -64,7 +64,7 @@ const HeroSection = () => {
         </button>
       </div>
       {/* Background Text */}
-      <div className="absolute bottom-0 md:left-1/2 transform md:-translate-x-1/2 z-40 sm:z-20">
+      <div className="absolute bottom-0 md:left-1/2 transform md:-translate-x-1/2 z-20">
         <span className="text-[80px] sm:text-[140px] md:text-200px] lg:text-[284px] font-manrope font-extralight uppercase text-[#171411] leading-none whitespace-nowrap overflow-hidden">
           BEAUTY BEAUTY
         </span>
