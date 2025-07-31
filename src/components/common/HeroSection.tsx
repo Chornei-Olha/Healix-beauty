@@ -34,13 +34,13 @@ const HeroSection = () => {
               <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[13px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
                 Lip augmentation
               </span>
-              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[12px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[13px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
                 Lifting
               </span>
-              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[12px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[13px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
                 Anti aging
               </span>
-              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[12px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
+              <span className="bg-[#F2F2F2] text-[#3F3F3F] text-[13px] sm:text-sm font-medium px-4 sm:px-6 py-3 rounded-2xl">
                 Bio revitalization & mesotherapy
               </span>
             </div>
