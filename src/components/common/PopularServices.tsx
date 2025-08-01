@@ -12,12 +12,12 @@ const PopularServices = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
 
   const services = [
-    { id: 1, title: 'Lorem ipsum', image: service1 },
-    { id: 2, title: 'Lorem ipsum', image: service2 },
-    { id: 3, title: 'Lorem ipsum', image: service3 },
-    { id: 4, title: 'Lorem ipsum', image: service4 },
-    { id: 5, title: 'Lorem ipsum', image: service1 },
-    { id: 6, title: 'Lorem ipsum', image: service2 },
+    { id: 1, title: 'Lorem ipsum', video: '/videos/video1.mp4' },
+    { id: 2, title: 'Lorem ipsum', video: '/videos/video2.mp4' },
+    { id: 3, title: 'Lorem ipsum', video: '/videos/video3.mp4' },
+    { id: 4, title: 'Lorem ipsum', video: '/videos/video4.mp4' },
+    { id: 5, title: 'Lorem ipsum', video: '/videos/video5.mp4' },
+    { id: 6, title: 'Lorem ipsum', video: '/videos/video6.mp4' },
   ];
 
   const scrollSlider = (direction: 'left' | 'right') => {
@@ -50,12 +50,13 @@ const PopularServices = () => {
                 {service.title}
               </h3>
               <div className="relative mt-[13.73px] md:mt-10 w-full h-[249px] md:h-[436px]">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 767px) 190px, 360px"
+                <video
+                  src={service.video}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  className="absolute top-0 left-0 w-full h-full object-cover rounded-md"
                 />
               </div>
               <button className="mt-[56.27px] md:mt-6 w-full bg-[#090909] text-white py-[10px] md:py-[12.5px] text-[12px] font-manrope font-extralight leading-[14.4px] uppercase hover:bg-[#837ba68a]">
