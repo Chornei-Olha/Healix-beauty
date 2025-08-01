@@ -31,7 +31,7 @@ const PopularServices = () => {
   };
 
   return (
-    <section className="mt-10 md:mt-[150px] px-4">
+    <section className="bg-[#F4F0EB66]/40 pt-10 pb-2 md:pt-[150px] px-4">
       <h2 className="text-center text-[24px] md:text-[40px] font-manrope font-extralight leading-[24.28px] md:leading-[48.8px] uppercase text-[#090909]">
         Popular <span className="italic font-inter">Services</span>
       </h2>
