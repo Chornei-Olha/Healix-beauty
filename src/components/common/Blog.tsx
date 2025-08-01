@@ -165,7 +165,7 @@ const Blog = () => {
                     size="xs"
                     className="bg-global-7 text-global-8 text-xs font-geist font-medium px-3 py-1 rounded-lg w-fit"
                   >
-                    Care
+                    Click
                   </Button>
                   <div className="space-y-4 text-global-16 group-hover:text-white transition-colors duration-300">
                     <p className="text-xs font-geist font-medium text-global-13 group-hover:text-white">
