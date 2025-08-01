@@ -1,6 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const testimonials = [
   {
@@ -54,8 +59,61 @@ const Testimonials = () => {
         </h2>
       </div>
 
-      {/* Testimonials Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Swiper for mobile, Grid for desktop */}
+      <div className="md:hidden mt-8">
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={20}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-global-12 rounded-lg p-6 space-y-6">
+                <p className="text-sm font-geist font-medium text-global-7 leading-7">
+                  {testimonial.text}
+                </p>
+
+                {/* Star Rating */}
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Image
+                      key={i}
+                      src="/images/img_component_1_blue_gray_900.svg"
+                      alt="Star"
+                      width={12}
+                      height={12}
+                      className="w-3 h-3"
+                    />
+                  ))}
+                </div>
+
+                {/* User Info */}
+                <div className="flex items-center space-x-2">
+                  <Image
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    width={38}
+                    height={38}
+                    className="w-10 h-10 rounded-lg"
+                  />
+                  <div>
+                    <p className="text-base font-geist font-medium text-global-7">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-xs font-geist font-medium text-global-12">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Grid for md+ */}
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-global-12 rounded-lg p-6 space-y-6">
             <p className="text-sm sm:text-lg font-geist font-medium text-global-7 leading-7">

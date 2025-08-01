@@ -2,6 +2,11 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,html,mdx}'],
   darkMode: 'class',
   theme: {
+    screens: {
+      sm: '768px',
+      md: '1024px',
+      lg: '1440px',
+    },
     extend: {
       colors: {
         global: {
@@ -52,9 +57,9 @@ module.exports = {
       container: {
         center: true,
         screens: {
-          sm: '640px',
-          md: '768px',
-          lg: '1320px',
+          sm: '768px',
+          md: '1024px',
+          lg: '1440px',
         },
       },
     },

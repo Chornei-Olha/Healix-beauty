@@ -67,9 +67,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               <p className="text-sm font-manrope font-light text-global-1 leading-relaxed">
                 1 Sea View Rd, Parkstone, Poole
                 <br />
-                BH12 3LP
-                <br />
-                Office 9
+                BH12 3LP, Office 9
               </p>
             </div>
           </div>
@@ -154,10 +152,10 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         </div>
 
         {/* Contact Phone */}
-        <div className="mb-6 sm:mb-8">
+        <div className="flex justify-center sm:justify-start mb-6 sm:mb-8">
           <a
             href="tel:+447555906085"
-            className="text-2xl sm:text-3xl font-medium font-geist text-global-10 hover:text-global-8 transition-colors duration-200"
+            className="text-3xl font-medium font-geist text-global-10 hover:text-global-8 transition-colors duration-200"
           >
             +447555906085
           </a>
@@ -166,32 +164,34 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         {/* Bottom Links */}
         <div className="border-t border-[#dedede] pt-5 sm:pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-center sm:items-center space-y-4 sm:space-y-0">
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
+            <div className="flex justify-between sm:justify-start w-full sm:space-y-0 sm:space-x-8">
               {legalLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium font-geist text-global-12 hover:text-global-8 transition-colors duration-200"
+                  className="text-xs sm:text-sm font-medium font-geist text-global-12 hover:text-global-8 transition-colors duration-200"
                 >
                   {link.label}
                 </a>
               ))}
             </div>
-            <p className="text-sm font-medium font-geist text-global-12">© 2025 Healix beauty™</p>
+            <p className="mr-auto sm:mr-0 text-sm font-medium font-geist text-global-12 whitespace-nowrap">
+              © 2025 Healix beauty™
+            </p>
           </div>
         </div>
 
         {/* Created by */}
-        <div className="mt-[30px]">
+        <div className="mt-[20px]">
           <p className="text-sm text-gray-500">
             Created by{' '}
             <Link
               href="https://impuls-studio.com.ua/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:underline"
+              className="text-black hover:underline"
             >
               Impuls Studio
             </Link>

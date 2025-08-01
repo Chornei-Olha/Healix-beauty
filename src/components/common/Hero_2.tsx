@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Hero_2 = () => {
   return (
     <section
-      className="relative w-full bg-cover bg-center bg-no-repeat text-white h-[100vh] sm:h-[1000px]"
+      className="relative w-full bg-cover bg-center bg-no-repeat text-white h-[600px] sm:h-[700px] md:h-[100vh]"
       style={{
         backgroundImage: `url('./images/background4.webp')`,
       }}
@@ -16,7 +16,7 @@ const Hero_2 = () => {
 
       <div className="container relative z-10 w-full mx-auto px-4 md:px-16 h-full flex flex-col justify-start">
         {/* Breadcrumbs */}
-        <p className="absolute top-[92px] md:top-[573px] left-[20px] md:left-[60px] uppercase text-xs font-extralight font-manrope flex gap-2">
+        <p className="absolute top-[25%] sm:top-[40%] md:top-[55%] left-[20px] md:left-[60px] uppercase text-xs font-extralight font-manrope flex gap-2">
           <span>Home Page</span>
           <span>/</span>
           <span className="italic text-white/40">Current Price List</span>
@@ -28,12 +28,12 @@ const Hero_2 = () => {
         </div>
 
         {/* Title */}
-        <h2 className="absolute text-white font-manrope text-[45px] md:text-[74px] font-extralight leading-[49px] md:leading-[81px] uppercase top-[200px] md:top-[624px]">
-          Price <span className="italic font-inter">Healix beauty</span>
+        <h2 className="absolute text-white font-manrope text-[45px] md:text-[74px] font-extralight leading-[49px] md:leading-[81px] uppercase top-[35%] sm:top-[50%] md:top-[65%]">
+          Price <span className="italic font-manrope font-extralight">Healix beauty</span>
         </h2>
 
         {/* Text */}
-        <p className="absolute text-white font-manrope text-[16px] font-extralight leading-[21px] top-[344px] md:top-[808px]">
+        <p className="absolute text-white font-manrope font-extralight text-[16px]  leading-[21px] top-[55%] sm:top-[60%] md:top-[75%]">
           Our treatment plans are individually tailored — based on your skin condition, long-term
           goals and clinical priorities. <br />
           Every procedure is selected with precision and purpose — not quantity, but quality. <br />

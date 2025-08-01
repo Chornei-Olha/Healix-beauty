@@ -4,10 +4,13 @@ import Image from 'next/image';
 
 const DoctorProfile = () => {
   return (
-    <div id="about" className="relative bg-global-6 rounded-xl py-16 mt-8 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      id="about"
+      className="relative bg-white sm:bg-global-6 rounded-xl lg:py-16 lg:mt-8 overflow-hidden"
+    >
+      <div className="container mx-auto sm:px-6 lg:px-8">
         {/* Background Images */}
-        <div className="absolute bottom-0 left-0 right-0 z-10">
+        <div className="hidden lg:block absolute bottom-0 left-0 right-0 z-10">
           <Image
             src="/images/BG.webp"
             alt="Background"
@@ -31,14 +34,15 @@ const DoctorProfile = () => {
           {/* Left column */}
           <div className="flex flex-col justify-between space-y-16">
             {/* Top: Heading and intro */}
-            <div className="space-y-6 sm:pb-[100px]">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl font-geist font-medium text-global-8 leading-snug">
+            <div className="space-y-6 px-4 sm:pb-[100px]">
+              {' '}
+              <h3 className="text-[34px] sm:text-5xl md:text-6xl font-geist font-medium text-global-8 leading-snug">
                 Dr. Anna Kononenko
               </h3>
               <p className="text-sm font-urbanist text-global-9">
                 Aesthetic Doctor & Skincare Specialist
               </p>
-              <p className="text-sm font-urbanist text-global-1 leading-6 max-w-md">
+              <p className="text-sm font-urbanist font-regular text-global-1 leading-6 max-w-md">
                 I hold a medical degree from the National University of Pharmacy in Kharkiv,
                 Ukraine, and have over 10 years of hands-on experience in the field of aesthetic
                 medicine. My approach combines scientific precision with a deep understanding of
@@ -50,7 +54,7 @@ const DoctorProfile = () => {
 
             {/* Bottom: Experience Card */}
             <div className="hidden lg:block mt-12 max-w-sm">
-              <div className="bg-global-12 rounded-[32px] p-6 space-y-6">
+              <div className="bg-white sm:bg-global-12 sm:rounded-[32px] p-6 space-y-6">
                 <div className="flex justify-end">
                   <Image
                     src="/images/img_vector_black_900_02.svg"
@@ -81,7 +85,7 @@ const DoctorProfile = () => {
           <div className="relative flex flex-col justify-between items-end">
             {/* Top-right: Education Card */}
             <div className="hidden lg:block max-w-sm self-end">
-              <div className="bg-global-12 rounded-[32px] p-6 space-y-6">
+              <div className="bg-white sm:bg-global-12 rounded-[32px] p-6 space-y-6">
                 <div className="flex justify-end">
                   <Image
                     src="/images/img_vector_black_900_02.svg"
@@ -108,7 +112,7 @@ const DoctorProfile = () => {
 
             {/* Bottom-right: Client Stats Card */}
             <div className="hidden lg:block max-w-md self-end mt-12">
-              <div className="bg-global-13 rounded-xl p-6 shadow-[0px_4px_4px_#888888ff] space-y-5">
+              <div className="bg-white sm:bg-global-13 sm:rounded-xl p-6 shadow-[0px_4px_4px_#888888ff] space-y-5">
                 <div className="flex items-center justify-between space-x-4">
                   <div className="flex items-center">
                     <span className="text-6xl font-urbanist font-semibold text-global-11">360</span>
@@ -140,7 +144,7 @@ const DoctorProfile = () => {
 
           {/* Mobile content block */}
           <div className="lg:hidden">
-            <div className="lg:hidden relative mb-8">
+            <div className="lg:hidden relative">
               {/* Anna image */}
               <Image
                 src="/images/Anna.webp"
@@ -157,7 +161,7 @@ const DoctorProfile = () => {
                   alt="Background"
                   width={1422}
                   height={158}
-                  className="w-full h-auto"
+                  className="w-full h-[100px]"
                 />
               </div>
             </div>
@@ -165,7 +169,7 @@ const DoctorProfile = () => {
             <div className="space-y-8">
               {/* Cards reused */}
               {/* Education */}
-              <div className="bg-global-12 rounded-[32px] p-6 space-y-6">
+              <div className="bg-white sm:bg-global-12 sm:rounded-[32px] p-6 space-y-6">
                 <div className="flex justify-end">
                   <Image
                     src="/images/img_vector_black_900_02.svg"
@@ -180,17 +184,19 @@ const DoctorProfile = () => {
                     Ongoing Education & Clinical Excellence
                   </h4>
                   <p className="text-sm font-urbanist text-global-9 leading-6">
-                    Aesthetics is an ever-evolving field — and I evolve with it.  I invest in
+                    Aesthetics is an ever-evolving field — and I evolve with it. I invest in
                     continuous training with top European and UK educators to master the safest,
-                    most advanced techniques in non-invasive skin care.\nFrom precision injectables
-                    to regenerative treatments, I ensure my clients benefit from the latest
-                    innovations — delivered with skill, care, and integrity.{' '}
+                    most advanced techniques in non-invasive skin care.
+                    <br />
+                    From precision injectables to regenerative treatments, I ensure my clients
+                    benefit from the latest innovations — delivered with skill, care, and
+                    integrity.{' '}
                   </p>
                 </div>
               </div>
 
               {/* Client Stats */}
-              <div className="bg-global-13 rounded-xl p-6 shadow-[0px_4px_4px_#888888ff] space-y-5">
+              <div className="mx-4  bg-white sm:bg-global-13 rounded-xl p-6 shadow-[0px_4px_4px_#888888ff] space-y-5">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex items-center space-x-2">
                     <span className="text-4xl font-urbanist font-semibold text-global-11">360</span>
@@ -219,7 +225,7 @@ const DoctorProfile = () => {
               </div>
 
               {/* Experience */}
-              <div className="bg-global-12 rounded-[32px] p-6 space-y-6">
+              <div className="bg-white sm:bg-global-12 sm:rounded-[32px] p-6 space-y-6">
                 <div className="flex justify-end">
                   <Image
                     src="/images/img_vector_black_900_02.svg"

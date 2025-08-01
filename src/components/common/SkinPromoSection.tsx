@@ -2,11 +2,12 @@
 
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
+import CountUp from 'react-countup';
 
 const SkinSectionBlock = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 mb-10">
+      <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 mb-6">
         {/* Bonus Skincare Plan – order 1 */}
         <div className="lg:col-span-3 relative bg-global-3 border border-[#dedede7f] rounded-lg overflow-hidden shadow-[0px_4px_20px_#888888ff] order-1 lg:order-none">
           <div
@@ -27,7 +28,9 @@ const SkinSectionBlock = () => {
             </div>
             <div className="space-y-4">
               <h3 className="text-5xl font-geist font-medium text-global-15 leading-[63px]">
-                Bonus Skincare Plan
+                Bonus Skincare
+                <br className="lg:hidden" />
+                Plan
               </h3>
               <p className="text-lg font-geist font-medium text-global-15 leading-7">
                 Developed in partnership with dermatological researchers, our formulation philosophy
@@ -35,13 +38,16 @@ const SkinSectionBlock = () => {
                 deliver superior results. Our minimalist approach is validated by extensive testing
                 across diverse skin types and conditions.
               </p>
-              <Button
-                variant="secondary"
-                size="md"
-                className="bg-global-12 text-global-2 text-xs font-manrope font-light uppercase px-8 py-2"
-              >
-                BOOK NOW
-              </Button>
+              <div className="flex">
+                {' '}
+                <Button
+                  variant="secondary"
+                  size="md"
+                  className="w-full lg:w-[40%] bg-global-12 text-global-2 text-xs font-manrope font-light uppercase px-8 py-2 mx-auto lg:mx-0"
+                >
+                  BOOK NOW
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -49,10 +55,10 @@ const SkinSectionBlock = () => {
         {/* LEFT COLUMN – Statistics */}
         <div className="space-y-6 lg:col-span-2 flex flex-col h-full order-2 lg:order-none">
           {/* 97.3% Card */}
-          <div className="flex-1 flex flex-col justify-between bg-global-9 border border-[#dedede7f] rounded-lg p-12 shadow-[0px_4px_20px_#888888ff]">
+          <div className="flex-1 flex flex-col justify-between bg-global-9 border border-[#dedede7f] rounded-lg p-7 shadow-[0px_4px_20px_#888888ff]">
             <div className="text-center mb-8">
               <h3 className="text-left text-5xl font-geist font-semibold text-global-8 leading-[63px]">
-                97.3%
+                <CountUp end={97.3} duration={2} decimals={1} suffix="%" />
               </h3>
             </div>
             <p className="text-lg font-geist font-medium text-global-12 leading-7">
@@ -61,8 +67,8 @@ const SkinSectionBlock = () => {
           </div>
 
           {/* Careful Approach Card */}
-          <div className="flex-1 flex flex-col justify-between bg-global-9 border border-[#dedede7f] rounded-lg p-12 shadow-[0px_4px_20px_#888888ff] order-4 lg:order-none">
-            <h3 className="text-5xl font-geist font-medium text-global-8 leading-[63px] mb-8">
+          <div className="flex-1 flex flex-col justify-between bg-global-9 border border-[#dedede7f] rounded-lg p-7 shadow-[0px_4px_20px_#888888ff] order-4 lg:order-none">
+            <h3 className="text-4xl sm:text-5xl font-geist font-semibold text-global-8 leading-[63px] mb-5 sm:mb-8">
               Careful approach
             </h3>
             <p className="text-lg font-geist font-medium text-global-12 leading-7">
@@ -133,66 +139,55 @@ const SkinSectionBlock = () => {
               <h3 className="text-3xl sm:text-5xl font-geist font-medium text-global-16 leading-[40px] sm:leading-[63px] mt-5 sm:mt-0 mb-8">
                 Your skin deserves better.
               </h3>
-              <div className="space-y-3">
-                <div className="flex flex-wrap gap-2">
-                  <Button
-                    variant="secondary"
-                    size="xs"
-                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
-                  >
-                    Smoother texture
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="xs"
-                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
-                  >
-                    Enhanced firmness
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="xs"
-                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
-                  >
-                    Long-lasting hydration
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="xs"
-                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
-                  >
-                    Smaller pores
-                  </Button>
+              <div className="space-y-3 overflow-hidden">
+                {/* Row 1 — left loop */}
+                <div className="relative w-full overflow-hidden">
+                  <div className="animate-marquee-left flex gap-4 w-max">
+                    {[...Array(3)].flatMap((_, i) =>
+                      [
+                        'Smoother texture',
+                        'Enhanced firmness',
+                        'Long-lasting hydration',
+                        'Smaller pores',
+                        'Smoother texture',
+                        'Enhanced firmness',
+                        'Long-lasting hydration',
+                        'Smaller pores',
+                      ].map((text, j) => (
+                        <span
+                          key={`${i}-${j}`}
+                          className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-4 py-2 rounded-lg border border-global-8"
+                        >
+                          {text}
+                        </span>
+                      ))
+                    )}
+                  </div>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  <Button
-                    variant="secondary"
-                    size="xs"
-                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-6 py-1 sm:py-2 rounded-lg"
-                  >
-                    Improved clarity
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="xs"
-                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
-                  >
-                    Clearer skin
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="xs"
-                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
-                  >
-                    Stronger barrier
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="xs"
-                    className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg"
-                  >
-                    Natural radiance
-                  </Button>
+
+                {/* Row 2 — right loop */}
+                <div className="relative w-full overflow-hidden">
+                  <div className="animate-marquee-right flex gap-4 w-max">
+                    {[...Array(2)].flatMap((_, i) =>
+                      [
+                        'Improved clarity',
+                        'Clearer skin',
+                        'Stronger barrier',
+                        'Natural radiance',
+                        'Improved clarity',
+                        'Clearer skin',
+                        'Stronger barrier',
+                        'Natural radiance',
+                      ].map((text, j) => (
+                        <span
+                          key={`${i}-${j}`}
+                          className="bg-global-7 text-global-8 text-xs sm:text-sm font-geist font-medium px-4 py-2 rounded-lg border border-global-8"
+                        >
+                          {text}
+                        </span>
+                      ))
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

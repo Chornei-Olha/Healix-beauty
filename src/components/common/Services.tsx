@@ -91,10 +91,10 @@ const Services = () => {
 
   return (
     <section className="pt-[83px] container mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-center uppercase font-light mb-5 text-[24px] md:text-[40px] leading-[29.28px] md:leading-[48.8px] font-manrope text-[#090909]">
-        Services <span className="italic font-inter">Healix beauty</span>
+      <h2 className="text-center uppercase font-extralight mb-5 text-[24px] md:text-[40px] leading-[29.28px] md:leading-[48.8px] font-manrope text-[#090909]">
+        Services <span className="italic font-manrope font-extralight ">Healix beauty</span>
       </h2>
-      <p className="text-center text-[#090909] font-manrope text-sm font-light leading-[23.94px] mb-10">
+      <p className="text-center text-[#090909] font-manrope text-sm font-extralight leading-[23.94px] mb-10">
         We create beauty together with you and with care. For all services, we carefully select
         products that are safe for you and the environment.
       </p>
@@ -120,9 +120,26 @@ const Services = () => {
           const isSecondMobileCard = isMobile && !showAll && idx === 1;
 
           const card = (
+            // <div
+            //   key={service.id}
+            //   className={`${baseClass} ${layout[idx] ?? ''} ${
+            //     isFirstMobileCard
+            //       ? 'h-[180px] md:h-full mb-[200px]'
+            //       : isSecondMobileCard
+            //         ? 'mt-[0px] h-[180px] md:h-full'
+            //         : 'h-[180px] md:h-full'
+            //   }`}
+            // >
             <div
               key={service.id}
-              className={`${baseClass} ${layout[idx] ?? ''} ${
+              onClick={() => {
+                const anchor = service.title
+                  .toLowerCase()
+                  .replace(/\s+/g, '-')
+                  .replace(/[^\w-]+/g, '');
+                router.push(`/pricePage#${anchor}`);
+              }}
+              className={`${baseClass} ${layout[idx] ?? ''} cursor-pointer ${
                 isFirstMobileCard
                   ? 'h-[180px] md:h-full mb-[200px]'
                   : isSecondMobileCard
@@ -138,10 +155,10 @@ const Services = () => {
               />
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#090909] to-[#090909]/64 text-white flex flex-col py-4 md:py-7 pl-4 md:pl-7 transition-colors group-hover:from-black/60 group-hover:to-black/90">
                 <div>
-                  <h3 className="uppercase font-manrope text-[20px] md:text-[28px] font-light leading-[28px]">
+                  <h3 className="uppercase font-manrope font-extralight text-[20px] md:text-[28px]  leading-[28px]">
                     {service.title}
                   </h3>
-                  <p className="font-manrope text-[12px] md:text-[14px] font-light leading-[20px] md:leading-[24px] mt-1">
+                  <p className="font-manrope font-extralight text-[12px] md:text-[14px]  leading-[20px] md:leading-[24px] mt-1">
                     {service.description}
                   </p>
                 </div>
@@ -172,14 +189,14 @@ const Services = () => {
           {!showAll ? (
             <button
               onClick={() => setShowAll(true)}
-              className="w-full md:max-w-[200px] px-[61.5px] py-[13px] bg-[#090909] text-white uppercase font-manrope text-[14px] md:text-[12px] font-light leading-[16.8px] md:leading-[14.4px] hover:bg-[#837ba68a] transition-colors"
+              className="w-full md:max-w-[200px] px-[61.5px] py-[13px] bg-[#090909] text-white uppercase font-manrope font-extralight text-[14px] md:text-[12px]  leading-[16.8px] md:leading-[14.4px] hover:bg-[#837ba68a] transition-colors"
             >
               More
             </button>
           ) : (
             <button
               onClick={() => router.push('/pricePage')}
-              className="w-full md:max-w-[200px] px-[61.5px] py-[13px] bg-[#090909] text-white uppercase font-manrope text-[14px] md:text-[12px] font-light leading-[16.8px] md:leading-[14.4px] hover:bg-[#837ba68a] transition-colors"
+              className="w-full md:max-w-[200px] px-[61.5px] py-[13px] bg-[#090909] text-white uppercase font-manrope font-extralight text-[14px] md:text-[12px]  leading-[16.8px] md:leading-[14.4px] hover:bg-[#837ba68a] transition-colors"
             >
               PRICE
             </button>

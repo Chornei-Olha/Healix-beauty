@@ -8,7 +8,7 @@ const ZemitsSection = () => {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8  bg-global-12 rounded-xl space-y-16 pt-12">
       {/* Text Block */}
       <div className="space-y-4">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-geist font-semibold text-global-4 leading-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-geist font-semibold text-global-4 leading-tight">
           Zemits SkyFrax Pro - fractional skin rejuvenation without injections
         </h2>
         <p className="text-base font-urbanist text-global-9 leading-7 max-w-5xl">

@@ -1,7 +1,8 @@
 'use client'; // Только если используете app router
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
 
 const data = {
   'Tear Trough Augmentation': [
@@ -111,6 +112,24 @@ const menuItems = Object.keys(data);
 export default function ServicesTable() {
   const [selected, setSelected] = useState(menuItems[0]);
   const [isMenuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+    const hash = window.location.hash.slice(1); // remove the '#' symbol
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setSelected(
+          menuItems.find(
+            (item) =>
+              item
+                .toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^\w-]+/g, '') === hash
+          ) || menuItems[0]
+        );
+      }
+    }
+  }, []);
 
   return (
     <div className="flex flex-col md:flex-row max-w-6xl mx-auto px-4 py-6 gap-8">
@@ -145,17 +164,24 @@ export default function ServicesTable() {
 
         {/* Desktop Sidebar */}
         <div className="hidden md:flex flex-col gap-2">
-          {menuItems.map((item) => (
-            <button
-              key={item}
-              onClick={() => setSelected(item)}
-              className={`text-left px-4 py-3 rounded uppercase font-geist font-extralight hover:text-white border-b border-gray-200 hover:bg-[#4D3D31] ${
-                selected === item ? 'bg-[#4D3D31] text-white font-regular' : ''
-              }`}
-            >
-              {item}
-            </button>
-          ))}
+          {menuItems.map((item) => {
+            const anchor = item
+              .toLowerCase()
+              .replace(/\s+/g, '-')
+              .replace(/[^\w-]+/g, '');
+            return (
+              <button
+                key={item}
+                id={anchor}
+                onClick={() => setSelected(item)}
+                className={`text-left px-4 py-3 rounded uppercase font-manrope font-extralight hover:text-white border-b border-gray-200 hover:bg-[#4D3D31] ${
+                  selected === item ? 'bg-[#4D3D31] text-white font-regular' : ''
+                }`}
+              >
+                {item}
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -165,17 +191,19 @@ export default function ServicesTable() {
           <table className="w-full table-auto border-collapse">
             <thead className="bg-[#dcd8d6] text-left">
               <tr>
-                <th className="p-4 border-r border-gray-200 font-geist font-extralight">SERVICE</th>
-                <th className="p-4 text-right font-geist font-extralight">PRICE</th>
+                <th className="p-4 border-r border-gray-200 font-manrope font-extralight">
+                  SERVICE
+                </th>
+                <th className="p-4 text-right font-manrope font-extralight">PRICE</th>
               </tr>
             </thead>
             <tbody>
               {data[selected].map(([service, price]: [string, string], index: number) => (
                 <tr key={index} className="border-t hover:bg-[#edecea]">
-                  <td className="p-4 border-r border-gray-200 text-gray-60 font-geist font-extralight">
+                  <td className="p-4 border-r border-gray-200 text-gray-60 font-manrope font-extralight">
                     {service}
                   </td>
-                  <td className="p-4 text-right text-gray-600 font-geist font-extralight">
+                  <td className="p-4 text-right text-gray-600 font-manrope font-extralight">
                     {price}
                   </td>
                 </tr>
