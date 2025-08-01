@@ -66,7 +66,7 @@ const PopularServices = () => {
               key={service.id}
               data-index={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="flex-shrink-0 w-full min-w-full md:w-[360px] bg-white/40 pt-3 md:pt-4 pb-0 md:pb-6 text-center snap-start relative h-screen md:h-auto"
+              className="flex-shrink-0 w-full md:w-[360px] bg-white/40 pt-3 md:pt-4 pb-0 md:pb-6 text-center snap-start relative h-screen md:h-auto"
             >
               <h3 className="font-manrope text-[14px] md:text-[18px] font-extralight leading-[14px] md:leading-[18px] uppercase">
                 {service.title}
