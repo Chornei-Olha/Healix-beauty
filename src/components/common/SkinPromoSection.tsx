@@ -76,11 +76,21 @@ const SkinSectionBlock = () => {
             </p>
           </div>
           {/* Mobile version of "Your skin. Your strength." */}
-          <div
-            className="block lg:hidden relative bg-cover bg-center rounded-lg overflow-hidden min-h-[350px] shadow-[0px_4px_20px_#888888ff] order-3"
-            style={{ backgroundImage: 'url(/images/img__2.png)' }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent flex flex-col justify-between p-5">
+          <div className="block lg:hidden relative rounded-lg overflow-hidden h-[250px] shadow-[0px_4px_20px_#888888ff] order-3">
+            {/* Фоновое видео */}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/videos/skin.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Затемнение + контент */}
+            <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent flex flex-col justify-between p-5 z-10">
               <h3 className="text-4xl font-geist font-medium text-global-14 leading-[47px]">
                 Your skin. Your strength.
               </h3>
@@ -100,11 +110,21 @@ const SkinSectionBlock = () => {
 
       <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6">
         {/* Desktop version of "Your skin. Your strength." */}
-        <div
-          className="hidden lg:block lg:col-span-2 relative bg-cover bg-center rounded-lg overflow-hidden min-h-[350px] shadow-[0px_4px_20px_#888888ff]"
-          style={{ backgroundImage: 'url(/images/img__2.png)' }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent flex flex-col justify-between p-5">
+        <div className="hidden lg:block lg:col-span-2 relative rounded-lg overflow-hidden h-[350px] shadow-[0px_4px_20px_#888888ff]">
+          {/* Фоновое видео */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/skin.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          {/* Затемнение + контент */}
+          <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent flex flex-col justify-between p-5 z-10">
             <h3 className="text-4xl font-geist font-medium text-global-14 leading-[47px]">
               Your skin. Your strength.
             </h3>
@@ -122,7 +142,7 @@ const SkinSectionBlock = () => {
 
         {/* Your Skin Deserves Better – order 5 */}
         <div
-          className="lg:col-span-3 relative bg-cover bg-center rounded-lg overflow-hidden min-h-[350px]"
+          className="lg:col-span-3 relative bg-cover bg-center rounded-lg overflow-hidden h-[350px]"
           style={{ backgroundImage: 'url(/images/img__1.png)' }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent flex flex-col justify-between">
