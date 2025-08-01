@@ -125,8 +125,8 @@ const SkinSectionBlock = () => {
           className="lg:col-span-3 relative bg-cover bg-center rounded-lg overflow-hidden min-h-[350px]"
           style={{ backgroundImage: 'url(/images/img__1.png)' }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent p-6 flex flex-col justify-between">
-            <div className="flex justify-end">
+          <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent flex flex-col justify-between">
+            <div className="flex justify-end p-6">
               <Image
                 src="/images/img_component_1_white_a700.svg"
                 alt="Logo"
@@ -136,10 +136,10 @@ const SkinSectionBlock = () => {
               />
             </div>
             <div>
-              <h3 className="text-3xl sm:text-5xl font-geist font-medium text-global-16 leading-[40px] sm:leading-[63px] mt-5 sm:mt-0 mb-8">
+              <h3 className="p-6 text-3xl sm:text-5xl font-geist font-medium text-global-16 leading-[40px] sm:leading-[63px] mt-5 sm:mt-0 mb-8">
                 Your skin deserves better.
               </h3>
-              <div className="space-y-3 overflow-hidden">
+              <div className="space-y-3 overflow-hidden pb-6">
                 {/* Row 1 — left loop */}
                 <div className="relative w-full overflow-hidden">
                   <div className="animate-marquee-left flex gap-4 w-max">
