@@ -3,12 +3,12 @@
 import { useRef, useEffect, useState } from 'react';
 
 const services = [
-  { id: 1, title: 'Lorem ipsum', video: '/videos/video1.mp4' },
-  { id: 2, title: 'Lorem ipsum', video: '/videos/video2.mp4' },
-  { id: 3, title: 'Lorem ipsum', video: '/videos/video3.mp4' },
-  { id: 4, title: 'Lorem ipsum', video: '/videos/video4.mp4' },
-  { id: 5, title: 'Lorem ipsum', video: '/videos/video5.mp4' },
-  { id: 6, title: 'Lorem ipsum', video: '/videos/video6.mp4' },
+  { id: 1, title: 'Sculpted glow', video: '/videos/video1.mp4' },
+  { id: 2, title: 'Cell revival', video: '/videos/video2.mp4' },
+  { id: 3, title: 'Facial detox', video: '/videos/video3.mp4' },
+  { id: 4, title: 'Lift & firm', video: '/videos/video4.mp4' },
+  { id: 5, title: 'Deep hydration', video: '/videos/video5.mp4' },
+  { id: 6, title: 'Skin clarity', video: '/videos/video6.mp4' },
 ];
 
 const PopularServices = () => {
