@@ -13,6 +13,7 @@ import DoctorProfile from '../components/common/DoctorProfile';
 import SkinSectionBlock from '../components/common/SkinPromoSection';
 import HeroSection from '../components/common/HeroSection';
 import Advantages from '../components/common/Advantages';
+import UltranexxLite from '../components/common/UltranexxLite';
 export default function HomePage(): JSX.Element {
   return (
     <div>
@@ -23,8 +24,8 @@ export default function HomePage(): JSX.Element {
       <PopularServices />
       <Services />
       <ZemitsSection />
-
       <Advantages />
+      <UltranexxLite />
       <Testimonials />
       <Blog />
       <BottomQuote />
