@@ -48,7 +48,7 @@ const HeroSection = () => {
               src="/images/BG2.webp"
               alt="Background"
               width={1422}
-              height={158}
+              height={558}
               className="w-full h-[150px] sm:h-[431px]"
             />
           </div>
@@ -98,7 +98,7 @@ const HeroSection = () => {
             src="/images/BG2.webp"
             alt="Background"
             width={1422}
-            height={158}
+            height={558}
             className="w-full h-[150px] sm:h-[431px]"
           />
         </div>

@@ -57,8 +57,8 @@ const ZemitsSection = () => {
           <Image
             src="/images/benefits1.webp"
             alt="Treatment feature"
-            width={408}
-            height={414}
+            width={1408}
+            height={1414}
             className="w-full h-auto rounded-[40px]"
           />
         </div>
@@ -66,8 +66,8 @@ const ZemitsSection = () => {
           <Image
             src="/images/benefits2.webp"
             alt="Benefits"
-            width={410}
-            height={414}
+            width={1410}
+            height={1414}
             className="w-full h-auto rounded-[40px]"
           />
         </div>

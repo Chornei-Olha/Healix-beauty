@@ -12,6 +12,7 @@ import ZemitsSection from '../components/common/ZemitsSection';
 import DoctorProfile from '../components/common/DoctorProfile';
 import SkinSectionBlock from '../components/common/SkinPromoSection';
 import HeroSection from '../components/common/HeroSection';
+import Advantages from '../components/common/Advantages';
 export default function HomePage(): JSX.Element {
   return (
     <div>
@@ -22,6 +23,8 @@ export default function HomePage(): JSX.Element {
       <PopularServices />
       <Services />
       <ZemitsSection />
+
+      <Advantages />
       <Testimonials />
       <Blog />
       <BottomQuote />

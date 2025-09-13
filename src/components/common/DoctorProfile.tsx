@@ -23,8 +23,8 @@ const DoctorProfile = () => {
           <Image
             src="/images/Anna.webp"
             alt="Dr. Anna Kononenko"
-            width={742}
-            height={724}
+            width={1742}
+            height={1724}
             className="max-w-[742px] h-auto"
           />
         </div>
