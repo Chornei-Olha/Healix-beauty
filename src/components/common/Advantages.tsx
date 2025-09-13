@@ -5,9 +5,9 @@ import Button from '@/components/ui/Button';
 export default function Advantages() {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8 mt-[70px] sm:mt-[100px]">
-      <div className="gap-7">
+      <div>
         {/* Заголовок */}
-        <div className="flex flex-col sm:flex-row font-geist justify-between">
+        <div className="gap-7 flex flex-col sm:flex-row font-geist justify-between">
           <div className="max-w-4xl flex flex-col justify-between gap-5">
             <h2 className="text-3xl md:text-4xl font-medium text-gray-800 mb-6">ADVANTAGES</h2>
 
