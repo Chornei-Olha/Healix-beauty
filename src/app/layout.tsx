@@ -7,15 +7,13 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: 'Next.js with Tailwind CSS',
-  description: 'A boilerplate project with Next.js and Tailwind CSS',
+  title: 'Healix beauty',
+  description:
+    'Our treatment plans are individually tailored — based on your skin condition, long-term goals and clinical priorities.',
   icons: {
-    icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' }
-    ],
+    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -24,8 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbohdansa9212back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
-</body>
+      <body>
+        {children}
+        <script
+          type="module"
+          src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbohdansa9212back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"
+        ></script>
+      </body>
     </html>
   );
 }
