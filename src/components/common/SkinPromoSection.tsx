@@ -143,7 +143,7 @@ const SkinSectionBlock = () => {
         {/* Your Skin Deserves Better – order 5 */}
         <div
           className="lg:col-span-3 relative bg-cover bg-center rounded-lg overflow-hidden h-[350px]"
-          style={{ backgroundImage: 'url(/images/img__1.png)' }}
+          style={{ backgroundImage: 'url(/images/img__1.webp)' }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent flex flex-col justify-between">
             <div className="flex justify-end p-6">

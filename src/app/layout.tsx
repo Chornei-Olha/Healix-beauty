@@ -7,11 +7,11 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: 'Healix beauty',
+  title: 'AK Aesthetics',
   description:
     'Our treatment plans are individually tailored — based on your skin condition, long-term goals and clinical priorities.',
   icons: {
-    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    icon: [{ url: '/favicon.png', type: 'image/x-icon' }],
   },
 };
 

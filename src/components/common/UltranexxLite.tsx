@@ -66,7 +66,7 @@ export default function UltranexxLite() {
             <Button
               variant="primary"
               size="lg"
-              className="w-[70vw] sm:w-[25vw] bg-button-1 text-global-16 text-base font-urbanist font-medium border-t border-[#4d3d3133] px-8 py-4"
+              className="w-[70vw] sm:w-[30vw] bg-button-1 text-global-16 text-base font-urbanist font-medium border-t border-[#4d3d3133] px-8 py-4"
             >
               Zemits VeraFace Skin Analysis{' '}
             </Button>

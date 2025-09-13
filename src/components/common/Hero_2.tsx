@@ -29,7 +29,7 @@ const Hero_2 = () => {
 
         {/* Title */}
         <h2 className="absolute text-white font-manrope text-[45px] md:text-[74px] font-extralight leading-[49px] md:leading-[81px] uppercase top-[35%] sm:top-[50%] md:top-[65%]">
-          Price <span className="italic font-manrope font-extralight">Healix beauty</span>
+          Price <span className="italic font-manrope font-extralight">AK Aesthetics</span>
         </h2>
 
         {/* Text */}

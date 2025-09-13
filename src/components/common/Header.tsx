@@ -50,13 +50,13 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
       <div className="w-full container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 sm:py-6">
           {/* Logo */}
-          <div className="flex-shrink-0 w-[100px] sm:w-[134px]">
+          <div className="flex-shrink-0 w-[170px] sm:w-[250px]">
             <a href="/">
               <Image
-                src="/images/img_component_1.svg"
+                src="/images/Logo.png"
                 alt="AK Aesthetics Logo"
-                width={134}
-                height={32}
+                width={1500}
+                height={700}
                 className="w-full h-auto"
               />
             </a>

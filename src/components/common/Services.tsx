@@ -92,7 +92,7 @@ const Services = () => {
   return (
     <section className="pt-[83px] container mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-center uppercase font-extralight mb-5 text-[24px] md:text-[40px] leading-[29.28px] md:leading-[48.8px] font-manrope text-[#090909]">
-        Services <span className="italic font-manrope font-extralight ">Healix beauty</span>
+        Services <span className="italic font-manrope font-extralight ">AK Aesthetics</span>
       </h2>
       <p className="text-center text-[#090909] font-manrope text-sm font-extralight leading-[23.94px] mb-10">
         We create beauty together with you and with care. For all services, we carefully select

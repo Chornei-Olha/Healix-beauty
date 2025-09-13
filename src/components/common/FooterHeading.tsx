@@ -4,8 +4,8 @@ const FooterHeading = () => {
   return (
     <div className="bg-footer-1 relative w-full overflow-hidden">
       <div className="absolute inset-x-0 bottom-0 flex justify-left pointer-events-none">
-        <h2 className="text-[130px] sm:text-[300px] leading-none font-geist font-medium text-global-8 opacity-50 whitespace-nowrap">
-          Healix beauty
+        <h2 className="text-[80px] sm:text-[220px] leading-none font-geist font-medium text-global-8 opacity-50 whitespace-nowrap">
+          AK Aesthetics
         </h2>
       </div>
       {/* Заглушка высоты, чтобы родитель не схлопывался */}

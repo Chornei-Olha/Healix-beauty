@@ -57,11 +57,11 @@ const DoctorProfile = () => {
               <div className="bg-white sm:bg-global-12 sm:rounded-[32px] p-6 space-y-6">
                 <div className="flex justify-end">
                   <Image
-                    src="/images/img_vector_black_900_02.svg"
+                    src="/images/Logo.png"
                     alt="Icon"
                     width={68}
                     height={16}
-                    className="w-[68px] h-4"
+                    className="w-[150px] h-auto"
                   />
                 </div>
                 <div className="space-y-4">
@@ -88,11 +88,11 @@ const DoctorProfile = () => {
               <div className="bg-white sm:bg-global-12 rounded-[32px] p-6 space-y-6">
                 <div className="flex justify-end">
                   <Image
-                    src="/images/img_vector_black_900_02.svg"
+                    src="/images/Logo.png"
                     alt="Icon"
                     width={68}
                     height={16}
-                    className="w-[68px] h-4"
+                    className="w-[150px] h-auto"
                   />
                 </div>
                 <div className="space-y-4">

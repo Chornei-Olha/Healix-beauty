@@ -17,9 +17,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   };
 
   const menuLinks = [
-    { label: 'About', href: '/about' },
+    { label: 'About', href: '#about' },
     { label: 'Pricing', href: '/pricePage' },
-    { label: 'Reviews', href: '/reviews' },
+    { label: 'Reviews', href: '#reviews' },
   ];
 
   const socialLinks = [
@@ -98,11 +98,14 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 Stay essential.
               </h3>
               <p className="text-sm font-medium font-geist text-global-12 leading-relaxed">
-                Join our community for science-based skincare advice,
+                {/* Join our community for science-based skincare advice,
                 <br />
                 and exclusive access to limited-time offers. We respect your
                 <br />
-                inbox as much as your skin - no excessive communication.
+                inbox as much as your skin - no excessive communication. */}
+                Please leave your email address so I can contact you
+                <br />
+                and answer your questions about treatments and skincare
               </p>
             </div>
 
@@ -178,7 +181,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               ))}
             </div>
             <p className="mr-auto sm:mr-0 text-sm font-medium font-geist text-global-12 whitespace-nowrap">
-              © 2025 Healix beauty™
+              © 2025 AK Aesthetics™
             </p>
           </div>
         </div>
