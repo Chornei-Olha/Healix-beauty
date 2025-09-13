@@ -5,7 +5,7 @@ import Button from '@/components/ui/Button';
 export default function Advantages() {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8 mt-[70px] sm:mt-[100px]">
-      <div>
+      <div className="gap-7">
         {/* Заголовок */}
         <div className="flex flex-col sm:flex-row font-geist justify-between">
           <div className="max-w-4xl flex flex-col justify-between gap-5">
