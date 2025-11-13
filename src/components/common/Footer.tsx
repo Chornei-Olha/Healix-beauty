@@ -191,12 +191,12 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           <p className="text-sm text-gray-500">
             Created by{' '}
             <Link
-              href="https://impuls-studio.com.ua/"
+              href="https://www.instagram.com/impulse__studio/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black hover:underline"
             >
-              Impuls Studio
+              Impulse Studio
             </Link>
           </p>
         </div>

@@ -36,7 +36,7 @@ const ZemitsSection = () => {
               <div className="bg-global-4 rounded-[30px] w-[120px] sm:w-[164px] h-[50px] sm:h-[62px] flex justify-center items-center">
                 {' '}
                 <Image
-                  src="/images/img_vector.svg"
+                  src="/images/logo_w.webp"
                   alt="Arrow"
                   width={96}
                   height={26}

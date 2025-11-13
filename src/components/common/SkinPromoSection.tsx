@@ -19,7 +19,7 @@ const SkinSectionBlock = () => {
           <div className="relative bg-gradient-to-b from-[#090909]/40 to-[#090909]/40 p-7 h-full flex flex-col justify-between">
             <div className="flex justify-end">
               <Image
-                src="/images/img_component_1_white_a700.svg"
+                src="/images/logo_w.webp"
                 alt="Logo"
                 width={134}
                 height={32}
@@ -130,7 +130,7 @@ const SkinSectionBlock = () => {
             </h3>
             <div className="flex ml-auto">
               <Image
-                src="/images/img_vector.svg"
+                src="/images/logo_w.webp"
                 alt="Arrow"
                 width={134}
                 height={32}
@@ -148,7 +148,7 @@ const SkinSectionBlock = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-global-3 to-transparent flex flex-col justify-between">
             <div className="flex justify-end p-6">
               <Image
-                src="/images/img_component_1_white_a700.svg"
+                src="/images/logo_w.webp"
                 alt="Logo"
                 width={134}
                 height={32}
