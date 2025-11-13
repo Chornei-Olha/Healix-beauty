@@ -23,7 +23,7 @@ const SkinSectionBlock = () => {
                 alt="Logo"
                 width={134}
                 height={32}
-                className="w-[134px] h-8"
+                className="w-[134px] h-[auto]"
               />
             </div>
             <div className="space-y-4">
@@ -134,7 +134,7 @@ const SkinSectionBlock = () => {
                 alt="Arrow"
                 width={134}
                 height={32}
-                className="w-[134px] h-8"
+                className="w-[134px] h-[auto]"
               />
             </div>
           </div>
@@ -152,7 +152,7 @@ const SkinSectionBlock = () => {
                 alt="Logo"
                 width={134}
                 height={32}
-                className="w-[134px] h-8"
+                className="w-[134px] h-[auto]"
               />
             </div>
             <div>

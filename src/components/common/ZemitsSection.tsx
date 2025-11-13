@@ -40,7 +40,7 @@ const ZemitsSection = () => {
                   alt="Arrow"
                   width={96}
                   height={26}
-                  className="w-24 h-6"
+                  className="w-24 h-[auto]"
                 />
               </div>
               <div className="flex items-center space-x-4">
